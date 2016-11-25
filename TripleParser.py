@@ -125,7 +125,7 @@ class TripleRdfFileIterator(object):
 
     def __iter__(self):
         return self
-    def next(self):
+    def __next__(self):
         line=self.data_file.readline()
         if line:
             return Triple(line, self.delimiter_)
